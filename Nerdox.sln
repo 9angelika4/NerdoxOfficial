@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{40DF36DD-F3D8-B6D5-8755-E86D9BB745A8}") = "Nerdox", "Assembly-CSharp-firstpass.csproj", "{3C07A569-0644-AD85-D210-73B1634EF426}"
+EndProject
+Project("{40DF36DD-F3D8-B6D5-8755-E86D9BB745A8}") = "Nerdox", "Assembly-CSharp.csproj", "{8949AAF0-D91B-CADF-36AA-A34F82506C6F}"
+EndProject
+Project("{40DF36DD-F3D8-B6D5-8755-E86D9BB745A8}") = "Nerdox", "Assembly-CSharp-Editor.csproj", "{3B2DF2F8-05FF-77A6-BB05-499A6AD5BB8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C07A569-0644-AD85-D210-73B1634EF426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C07A569-0644-AD85-D210-73B1634EF426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C07A569-0644-AD85-D210-73B1634EF426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C07A569-0644-AD85-D210-73B1634EF426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8949AAF0-D91B-CADF-36AA-A34F82506C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8949AAF0-D91B-CADF-36AA-A34F82506C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8949AAF0-D91B-CADF-36AA-A34F82506C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8949AAF0-D91B-CADF-36AA-A34F82506C6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B2DF2F8-05FF-77A6-BB05-499A6AD5BB8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B2DF2F8-05FF-77A6-BB05-499A6AD5BB8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B2DF2F8-05FF-77A6-BB05-499A6AD5BB8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B2DF2F8-05FF-77A6-BB05-499A6AD5BB8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
