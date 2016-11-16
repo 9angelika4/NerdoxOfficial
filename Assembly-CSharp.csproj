@@ -60,6 +60,7 @@
      <Compile Include="Assets\CodeFiles\MainCharacter\SpellCast.cs" />
      <Compile Include="Assets\CodeFiles\NewBehaviourScript.cs" />
      <Compile Include="Assets\CodeFiles\NextLevelTrigger.cs" />
+     <Compile Include="Assets\CodeFiles\Opponent\MyMonster\darkPeapleBehave.cs" />
      <Compile Include="Assets\CodeFiles\Opponent\NonAttackingOpponent.cs" />
      <Compile Include="Assets\CodeFiles\Opponent\Opponent.cs" />
      <Compile Include="Assets\CodeFiles\Opponent\SceletonOpponent.cs" />

@@ -11,7 +11,6 @@ public class ObjectRespown : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		foreach (Transform child in transform) {
-			Debug.Log (child.name);
 			MultipleAppearancesHealt script = child.GetComponent<MultipleAppearancesHealt> ();
 				script.RespownWaiting ();
 		}

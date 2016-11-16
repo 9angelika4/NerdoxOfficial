@@ -5,7 +5,7 @@ public class SceletonOpponent : MonoBehaviour {
 
 	private Transform player;
 	private Transform opponent;
-	 Animator animator;
+	Animator animator;
 	public bool  smoothRotation = true;
 
 	 
