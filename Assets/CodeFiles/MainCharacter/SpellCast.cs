@@ -42,6 +42,7 @@ public class SpellCast : MonoBehaviour {
 	
 	}
 
+
 	void hit (GameObject hittedObject ) {
 		Health health = hittedObject.GetComponent < Health> ();
 		if (health != null) {

@@ -12,7 +12,7 @@ public class SceletonOpponent : MonoBehaviour {
 	public float rotationSpeed = 4.0f;
 	public float movementSpeed = 2.0f;
 	public float attackRange = 5.0f ;
-	public float distanceToStay = 0.3f;
+	public float distanceToStay = 2.0f;
 
 	private bool lookAtPlayer = false;
 	private Vector3 playerPositionXYZ;
@@ -31,7 +31,7 @@ public class SceletonOpponent : MonoBehaviour {
 		float actualDistance = Vector3.Distance (opponent.position, player.position);
 		lookAtPlayer = false;
 		if (actualDistance <= attackRange && actualDistance > distanceToStay) {
-			Debug.Log ("SHOW");
+	
 			lookAtPlayer = true; 
 			opponent.position = Vector3.MoveTowards (opponent.position, playerPositionXYZ, movementSpeed * Time.deltaTime);
 			animator.SetBool ("isWalking", true);

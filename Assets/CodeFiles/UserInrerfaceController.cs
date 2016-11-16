@@ -4,50 +4,73 @@ using UnityEngine.UI;
 
 public class UserInrerfaceController : MonoBehaviour {
 
-	private Canvas UserInterface; 
 
-	public Canvas userMenu ;
+	private Canvas resumeMenu ;
 	public Canvas hudMenu ;
-	//public Canvas timerLog;
-	public Button startButton;
-	//public Timer timer;
-	//public Text countDownText ;
+	public Canvas quitQuestion ;
+	public Button playButton;
+	private bool isTimePass = true;
 
+	public bool IsTimePass () {
+		return isTimePass;
+	}
 
-	// Use this for initialization
 	void Start () {
-		UserInterface = (Canvas)GetComponent<Canvas>();
-	//	timer = new Timer (ref countDownText);
-		userMenu = userMenu.GetComponent<Canvas> ();
- 		
-		startButton = startButton.GetComponent<Button> ();
-
-		hudMenu = hudMenu.GetComponent<Canvas>();
+		resumeMenu = (Canvas)GetComponent<Canvas>();
+		hudMenu = hudMenu.GetComponent<Canvas> ();
+		quitQuestion = quitQuestion.GetComponent<Canvas> ();
+		playButton = playButton.GetComponent<Button> ();	
+		resumeMenu.enabled = true;
 		hudMenu.enabled = false;
-
-		Time.timeScale = 0;
-		 
+		isTimePass = !resumeMenu.enabled;
+		quitQuestion.enabled = false;
+		Cursor.visible = resumeMenu.enabled;
+		Cursor.lockState = CursorLockMode.Confined;
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
-		if (hudMenu.enabled) {
-		//	timer.CountDown ();
+		if (Input.GetKeyUp (KeyCode.Escape)) {
+			
+			resumeMenu.enabled = ! resumeMenu.enabled;
+			Debug.Log ("is time pass  " +   isTimePass);
+			isTimePass = !resumeMenu.enabled;
+			hudMenu.enabled = !resumeMenu.enabled;
+			Cursor.visible = resumeMenu.enabled;
+			if (resumeMenu.enabled) {
+				Cursor.lockState = CursorLockMode.Confined;
+				Cursor.visible = true;
+				Time.timeScale = 0;
+			} else {
+				Cursor.lockState = CursorLockMode.Locked;
+				Cursor.visible = false;
+				Time.timeScale = 1;
+			}
 		}
-	/*	if (Input.GetKeyUp (KeyCode.Escape)){
-			userMenu.enabled = !userMenu.enabled;
-			hudMenu.enabled = !hudMenu.enabled;
-
-			Cursor.visible = userMenu.enabled;
-
-		}*/
 	}
 
-	public void OnStartButtonClick() {
-		userMenu.enabled = false;
+	public void OnExitButtonClick () {
+		resumeMenu.enabled = false;
+		quitQuestion.enabled = true;
+		hudMenu.enabled = false;
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = true;
+
+	} 
+	public void OnPlayGameButtonClick() {
+		isTimePass = true;
+		resumeMenu.enabled = false;
+		quitQuestion.enabled = false;
 		hudMenu.enabled = true;
 		Time.timeScale = 1;
+		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Confined;
+		playButton.enabled = true;
 
-	
 	}
+
+	public void YesQuitButton (){
+		Application.Quit();
+
+	}
+ 
 }

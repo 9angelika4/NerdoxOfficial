@@ -1,13 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CodeFiles\Opponent\SceletonOpponent.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CodeFiles\Health\ObjectRespown.cs">
     <Files>
-      <File FileName="Assets\CodeFiles\Opponent\SceletonOpponent.cs" Line="8" Column="2" />
-      <File FileName="Assets\CodeFiles\MainCharacter\SpellCast.cs" Line="33" Column="5" />
-      <File FileName="Assets\CodeFiles\StartPoint.cs" Line="21" Column="52" />
-      <File FileName="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\RigidbodyFirstPersonController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\MouseLook.cs" Line="1" Column="1" />
+      <File FileName="Assets\CodeFiles\KillingParticleTrigger.cs" Line="15" Column="4" />
+      <File FileName="Assets\CodeFiles\NextLevelTrigger.cs" Line="20" Column="3" />
+      <File FileName="Assets\CodeFiles\Health\Health.cs" Line="22" Column="2" />
+      <File FileName="Assets\CodeFiles\Health\MultipleAppearancesHealt.cs" Line="4" Column="38" />
+      <File FileName="Assets\CodeFiles\Health\ObjectRespown.cs" Line="21" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
