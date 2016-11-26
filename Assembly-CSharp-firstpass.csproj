@@ -98,11 +98,13 @@
      <Compile Include="Assets\Standard Assets\Utility\TimedObjectDestructor.cs" />
      <Compile Include="Assets\Standard Assets\Utility\WaypointCircuit.cs" />
      <Compile Include="Assets\Standard Assets\Utility\WaypointProgressTracker.cs" />
+     <None Include="Assets\CodeFiles\TextFiles\FirstMap\WelcomeStory.txt" />
      <None Include="Assets\laxer tree pkg\README.txt" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\KY_effects\MagicEffectsPackFree\ReadMe.txt" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\CodeFiles\TextFiles\FirstMap\FirstQuest.txt" />
      <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />

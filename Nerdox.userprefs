@@ -2,11 +2,13 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CodeFiles\Health\ObjectRespown.cs">
     <Files>
-      <File FileName="Assets\CodeFiles\KillingParticleTrigger.cs" Line="15" Column="4" />
-      <File FileName="Assets\CodeFiles\NextLevelTrigger.cs" Line="20" Column="3" />
-      <File FileName="Assets\CodeFiles\Health\Health.cs" Line="22" Column="2" />
-      <File FileName="Assets\CodeFiles\Health\MultipleAppearancesHealt.cs" Line="4" Column="38" />
-      <File FileName="Assets\CodeFiles\Health\ObjectRespown.cs" Line="21" Column="1" />
+      <File FileName="Assets\CodeFiles\Health\MultipleAppearancesHealt.cs" Line="7" Column="38" />
+      <File FileName="Assets\CodeFiles\Health\ObjectRespown.cs" Line="19" Column="2" />
+      <File FileName="Assets\CodeFiles\Opponent\MyMonster\darkPeapleBehave.cs" Line="38" Column="2" />
+      <File FileName="Assets\CodeFiles\Opponent\DarkMasAttack.cs" Line="28" Column="46" />
+      <File FileName="Assets\CodeFiles\Opponent\SceletonOpponent.cs" Line="18" Column="2" />
+      <File FileName="Assets\CodeFiles\Opponent\Bullet\BulletDestroy.cs" Line="25" Column="4" />
+      <File FileName="Assets\CodeFiles\Health\Health.cs" Line="8" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,24 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SceletonOpponent : MonoBehaviour {
+public class SceletonOpponent : Opponent {
 
-	private Transform player;
-	private Transform opponent;
+
 	Animator animator;
 	public bool  smoothRotation = true;
 
 	 
-	public float rotationSpeed = 4.0f;
-	public float movementSpeed = 2.0f;
-	public float attackRange = 5.0f ;
+
+
+
 	public float distanceToStay = 2.0f;
 
 	private bool lookAtPlayer = false;
-	private Vector3 playerPositionXYZ;
+
 
 	void Start () {
-		opponent = transform;
+
 		animator = GetComponent<Animator> ();
 		 
 	}
@@ -26,14 +25,14 @@ public class SceletonOpponent : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		 
-		player = GameObject.FindWithTag ("Player").transform;
-		playerPositionXYZ = new Vector3 (player.position.x, player.position.y, player.position.z);
-		float actualDistance = Vector3.Distance (opponent.position, player.position);
+	
+		/*
+		float actualDistance =
 		lookAtPlayer = false;
 		if (actualDistance <= attackRange && actualDistance > distanceToStay) {
 	
 			lookAtPlayer = true; 
-			opponent.position = Vector3.MoveTowards (opponent.position, playerPositionXYZ, movementSpeed * Time.deltaTime);
+			opponent.position = Vector3.MoveTowards (opponent.position, targetPositionXYZ, movementSpeed * Time.deltaTime);
 			animator.SetBool ("isWalking", true);
 			animator.SetBool ("isIdle", false);
 			animator.SetBool ("isAttacking", false);
@@ -50,16 +49,16 @@ public class SceletonOpponent : MonoBehaviour {
 			animator.SetBool("isAttacking",false);
 		}
 		watchPlayer (); 
- 
+ */
 	}
 
 	void watchPlayer(){
-		if (smoothRotation && lookAtPlayer == true) {
+		/*if (smoothRotation && lookAtPlayer == true) {
 			Quaternion rotation = Quaternion.LookRotation (playerPositionXYZ - opponent.position);
 			opponent.rotation = Quaternion.Slerp (opponent.rotation, rotation, Time.deltaTime * movementSpeed);
 
 		} else if (!smoothRotation && lookAtPlayer == true) {
 			transform.LookAt (playerPositionXYZ);
-		}
+		}*/
 	}
 }

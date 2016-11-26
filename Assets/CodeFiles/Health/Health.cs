@@ -5,23 +5,30 @@ public class Health : MonoBehaviour {
 
 	public float healthValue;
 	public float timeToRespown;
-	public float countedTimeToRespown;
-
+	protected float countedTimeToRespown;
+	protected FirstQuest firstQuest;
+	protected bool alive;
 	public void Damage ( float damageVal) {
 		healthValue -= damageVal;
 
 	}
 
 
-	public bool IsAlive () {
+	public void IsAlive () {
 		if (healthValue <= 0) {
-			return false;
+			if (alive) {
+				firstQuest.DeathCount ();
+			}
+			alive = false;
+		} 
+		else {
+			alive = true;
 		}
-		return true;
 	}
 
 	void Update () {
-		if (!IsAlive ()) {
+		IsAlive ();
+		if (!alive) {
 			gameObject.SetActive (false);
 		}
 	}

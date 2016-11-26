@@ -24,7 +24,7 @@ public class UserInrerfaceController : MonoBehaviour {
 		hudMenu.enabled = false;
 		isTimePass = !resumeMenu.enabled;
 		quitQuestion.enabled = false;
-		Cursor.visible = resumeMenu.enabled;
+		//Cursor.visible = resumeMenu.enabled;
 		Cursor.lockState = CursorLockMode.Confined;
 	}
 
@@ -35,14 +35,14 @@ public class UserInrerfaceController : MonoBehaviour {
 			Debug.Log ("is time pass  " +   isTimePass);
 			isTimePass = !resumeMenu.enabled;
 			hudMenu.enabled = !resumeMenu.enabled;
-			Cursor.visible = resumeMenu.enabled;
+		//	Cursor.visible = resumeMenu.enabled;
 			if (resumeMenu.enabled) {
 				Cursor.lockState = CursorLockMode.Confined;
-				Cursor.visible = true;
+				//Cursor.visible = true;
 				Time.timeScale = 0;
 			} else {
 				Cursor.lockState = CursorLockMode.Locked;
-				Cursor.visible = false;
+				//Cursor.visible = false;
 				Time.timeScale = 1;
 			}
 		}
@@ -53,7 +53,7 @@ public class UserInrerfaceController : MonoBehaviour {
 		quitQuestion.enabled = true;
 		hudMenu.enabled = false;
 		Cursor.lockState = CursorLockMode.Locked;
-		Cursor.visible = true;
+	//	Cursor.visible = true;
 
 	} 
 	public void OnPlayGameButtonClick() {

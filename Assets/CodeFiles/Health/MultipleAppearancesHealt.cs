@@ -3,8 +3,14 @@ using System.Collections;
 
 public class MultipleAppearancesHealt : Health {
 
+	private void Start () {
+		firstQuest = gameObject.GetComponentInParent<FirstQuest> ();
+	}
+
 	public void RespownWaiting () {
-		if (!IsAlive ()) {
+		 
+		if (!alive) {
+			
 			countedTimeToRespown += 1;
 			if (timeToRespown <= countedTimeToRespown) {
 				Debug.Log ("respown ");
