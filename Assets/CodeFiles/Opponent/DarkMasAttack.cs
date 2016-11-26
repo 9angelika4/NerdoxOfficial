@@ -12,11 +12,8 @@ public class DarkMasAttack : Opponent {
 
 	// Use this for initialization
 	void Start () {
-		
-	
 		InitializeOpponent ();
 		FillTargetInformation ();
-	 
 	}
 	
 	// Update is called once per frame
