@@ -1,14 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CodeFiles\Health\ObjectRespown.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CodeFiles\Opponent\SceletonOpponent.cs">
     <Files>
-      <File FileName="Assets\CodeFiles\Health\MultipleAppearancesHealt.cs" Line="7" Column="38" />
-      <File FileName="Assets\CodeFiles\Health\ObjectRespown.cs" Line="19" Column="2" />
-      <File FileName="Assets\CodeFiles\Opponent\MyMonster\darkPeapleBehave.cs" Line="38" Column="2" />
-      <File FileName="Assets\CodeFiles\Opponent\DarkMasAttack.cs" Line="28" Column="46" />
-      <File FileName="Assets\CodeFiles\Opponent\SceletonOpponent.cs" Line="18" Column="2" />
-      <File FileName="Assets\CodeFiles\Opponent\Bullet\BulletDestroy.cs" Line="25" Column="4" />
-      <File FileName="Assets\CodeFiles\Health\Health.cs" Line="8" Column="11" />
+      <File FileName="Assets\CodeFiles\Health\ObjectRespown.cs" Line="15" Column="1" />
+      <File FileName="Assets\CodeFiles\Opponent\Opponent.cs" Line="42" Column="56" />
+      <File FileName="Assets\CodeFiles\Opponent\SceletonOpponent.cs" Line="13" Column="2" />
+      <File FileName="Assets\CodeFiles\Opponent\DarkMasAttack.cs" Line="16" Column="28" />
+      <File FileName="Assets\CodeFiles\Opponent\MyMonster\darkPeapleBehave.cs" Line="38" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -12,16 +12,23 @@ public class TextImporter : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		if (textFile != null) {
 			Debug.Log (" file is found !");
 			textLines = (textFile.text.Split ('\n'));
-		}   
+			Debug.Log ("show" + textLines [1]);
+		}  
 
+	}
+	public void Initialize(){
+		if (textFile != null) {
+			Debug.Log (" file is found !");
+			textLines = (textFile.text.Split ('\n'));
+			Debug.Log ("show" + textLines [1]);
+		}   
 	}
 	public  IList<String> getText () {
 		IList<String> constArr = Array.AsReadOnly (textLines);
-		Debug.Log (" Show " + textLines [0]);
 		return constArr;
 	}
 

@@ -18,11 +18,9 @@ public class HitDetection : MonoBehaviour {
 
 	void OnTriggerEnter ( Collider other ){
 		if (other.CompareTag ("Player")) {
-			Health health = other.GetComponent<Health> ();
-			health.Damage (damageVal);
-
-		 	
-
+			Debug.Log ("hitted player");
+			//Health health = other.GetComponent<Health> ();
+			//health.Damage (damageVal);
 		}
 	}
 }

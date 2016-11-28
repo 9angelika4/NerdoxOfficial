@@ -19,6 +19,7 @@ public class TextManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
 		currentLine = 0;
 		dialogCanvas = GetComponent<Canvas> ();
 		turnDownDialog = dialogCanvas.GetComponentInParent<TurnDownTextPanel> ();

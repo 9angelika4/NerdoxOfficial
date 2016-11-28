@@ -14,7 +14,6 @@ public class ShowDialogWindow : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider collider) {
-		Debug.Log (" on collision enter");
 		if( collider.gameObject.tag == "Player"){
 			turnDownPanel.turnOnPanel ();
 		}

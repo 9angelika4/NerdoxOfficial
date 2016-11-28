@@ -6,29 +6,42 @@ public class Health : MonoBehaviour {
 	public float healthValue;
 	public float timeToRespown;
 	protected float countedTimeToRespown;
-	protected FirstQuest firstQuest;
+	protected DeathCount deathCount;
 	protected bool alive;
-	public void Damage ( float damageVal) {
-		healthValue -= damageVal;
+
+
+	protected void Initialize () {
+		deathCount = gameObject.GetComponentInParent<DeathCount> ();
 
 	}
 
+	public void Damage ( float damageVal) {
+		healthValue -= damageVal;
+		 
+	}
 
-	public void IsAlive () {
-		if (healthValue <= 0) {
-			if (alive) {
-				firstQuest.DeathCount ();
-			}
+
+	protected void IsAlive () {
+		if (healthValue < 0) {
+			bool prevAlive = alive;
+			Debug.Log (" before");
 			alive = false;
-		} 
-		else {
+			if (prevAlive) {
+				Debug.Log ("im here ");
+				deathCount.AddOneDeath ();
+			}
+ 		} 
+		else  {
 			alive = true;
+ 
 		}
+	 
 	}
 
 	void Update () {
 		IsAlive ();
 		if (!alive) {
+			Debug.Log ("DEAD");
 			gameObject.SetActive (false);
 		}
 	}
