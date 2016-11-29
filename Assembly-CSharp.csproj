@@ -49,7 +49,7 @@
      <Compile Include="Assets\CodeFiles\Effects\DoorHandler.cs" />
      <Compile Include="Assets\CodeFiles\FirstPersonController.cs" />
      <Compile Include="Assets\CodeFiles\GameOver.cs" />
-     <Compile Include="Assets\CodeFiles\Health\EmptyInterface.cs" />
+     <Compile Include="Assets\CodeFiles\Health\BossHealth.cs" />
      <Compile Include="Assets\CodeFiles\Health\Health.cs" />
      <Compile Include="Assets\CodeFiles\Health\MultipleAppearancesHealt.cs" />
      <Compile Include="Assets\CodeFiles\Health\ObjectRespown.cs" />
@@ -63,12 +63,14 @@
      <Compile Include="Assets\CodeFiles\Opponent\BossActivation.cs" />
      <Compile Include="Assets\CodeFiles\Opponent\BossBehave.cs" />
      <Compile Include="Assets\CodeFiles\Opponent\Bullet\BulletDestroy.cs" />
+     <Compile Include="Assets\CodeFiles\Opponent\CrawlerBehave.cs" />
      <Compile Include="Assets\CodeFiles\Opponent\DarkMasAttack.cs" />
+     <Compile Include="Assets\CodeFiles\Opponent\InsectBehave.cs" />
      <Compile Include="Assets\CodeFiles\Opponent\MyMonster\darkPeapleBehave.cs" />
-     <Compile Include="Assets\CodeFiles\Opponent\NonAttackingOpponent.cs" />
      <Compile Include="Assets\CodeFiles\Opponent\Opponent.cs" />
      <Compile Include="Assets\CodeFiles\Opponent\SceletonOpponent.cs" />
      <Compile Include="Assets\CodeFiles\PlayerPresenseDetection.cs" />
+     <Compile Include="Assets\CodeFiles\Quests\BossHeadQuest.cs" />
      <Compile Include="Assets\CodeFiles\Quests\DarkPeapleQuest.cs" />
      <Compile Include="Assets\CodeFiles\Quests\DeathCount.cs" />
      <Compile Include="Assets\CodeFiles\Quests\DeathQuestEnd.cs" />

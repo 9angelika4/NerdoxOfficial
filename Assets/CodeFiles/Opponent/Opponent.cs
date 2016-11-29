@@ -7,23 +7,24 @@ public class Opponent : MonoBehaviour {
 	protected Transform target;
 	protected Transform opponent;
 	protected Vector3 targetPositionXYZ;
-	public float attackRange = 20.0f ;
+
 	protected float rotationSpeed = 4.0f;
 	public float movementSpeed ;	
+ 
+
+	protected float distanceWhenWalk  ;
+	protected float distanceWhenAttack ;
 
 	protected bool  smoothRotation = true;
 	protected bool lookAtPlayer = false;
+	protected bool wasPlayed = false;
 
-	// Use this for initialization
+	protected AudioSource sound;
 	 
-	private void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	private void Update () {
- 
 
+	protected void InitializeDistanceInformation (float dWhenAttack , float dWhenWalk){
+		distanceWhenAttack = dWhenAttack;
+		distanceWhenWalk = dWhenWalk;
 	}
 
 	protected void InitializeOpponent () {
@@ -35,7 +36,7 @@ public class Opponent : MonoBehaviour {
 	}
 
 	protected bool CheckIfTargetIsCloseEnough () {
-		if (GetDistanceToTarget () <= attackRange) {
+		if (GetDistanceToTarget () <= distanceWhenWalk) {
 			return true;
 		}
 		return false;
@@ -55,7 +56,7 @@ public class Opponent : MonoBehaviour {
 	virtual public void Activate () {
 		gameObject.SetActive (true);
 	}
-	protected void watchPlayer(){
+	virtual protected void WatchPlayer(){
 		if (smoothRotation && lookAtPlayer == true) {
 			Quaternion rotation = Quaternion.LookRotation (targetPositionXYZ - opponent.position);
 			opponent.rotation = Quaternion.Slerp (opponent.rotation, rotation, Time.deltaTime * movementSpeed);
@@ -66,6 +67,46 @@ public class Opponent : MonoBehaviour {
 
 	}
 	protected void WalkToTarget(){
-		transform.position = Vector3.MoveTowards (transform.position, targetPositionXYZ, movementSpeed * Time.deltaTime);
+		opponent.position = Vector3.MoveTowards (opponent.position, targetPositionXYZ, movementSpeed * Time.deltaTime);
+	}
+
+	protected void  FillingOponentAndTargetInformation () {
+		InitializeOpponent ();
+		FillTargetInformation ();
+	}
+	protected bool IsTargetCloseEnoughToWalk(){
+		if (GetDistanceToTarget () < distanceWhenWalk && GetDistanceToTarget () > distanceWhenAttack) {
+			return true;
+		}
+		return false;
+	}
+	protected bool IsTargetCloseEnoughToAttack () {
+		if (GetDistanceToTarget () < distanceWhenAttack  ) {
+			return true;
+		}
+		return false;
+	}
+	virtual protected void Walk () {
+		LookAtPlayer ();
+		WatchPlayer ();
+		WalkToTarget ();
+	}
+	protected void LookAtPlayer(){
+		lookAtPlayer = true;
+	}
+	protected void DontLookAtPlayer(){
+		lookAtPlayer = false;
+	}
+
+	protected void PlaySound ( AudioClip audio  ){
+		sound = GetComponent<AudioSource> ();
+		if (!wasPlayed) {
+			sound.PlayOneShot (audio, 0.5f);
+			wasPlayed = true;
+		}
+	}
+
+	protected void ResetAudioCondition(){
+		wasPlayed = false;
 	}
 }

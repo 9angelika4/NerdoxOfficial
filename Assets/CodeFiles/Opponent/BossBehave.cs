@@ -5,19 +5,22 @@ public class BossBehave : Opponent {
 
 	private Animator animator;
 	public AudioClip roar;
-	private float distanceWhenWalk = 50;
-	private float distanceWhenAttack = 20 ;
+	public AudioClip dead;
 	private int distanceWhenRoar   = 60 ;
+	private BossHealth myHealth;
+	public GameObject bossHead;
  
 	// Use this for initialization
 	void Awake() {
+		bossHead.SetActive (false);
 		InitializeOpponent();
 		FillTargetInformation ();
+		InitializeDistanceInformation (10, 30);
 	}
 	void Start () {
-		
+		wasPlayed = false;
 		animator = GetComponent <Animator> ();
-		 
+		myHealth = GetComponent<BossHealth> ();
 		gameObject.SetActive (false);
 	}
 	
@@ -25,28 +28,37 @@ public class BossBehave : Opponent {
 	void Update () {
 		InitializeOpponent();
 		FillTargetInformation ();
-
-		if (GetDistanceToTarget () < distanceWhenRoar + 5 && GetDistanceToTarget () > distanceWhenRoar - 5) {
-			lookAtPlayer = true;
+		if (myHealth.GetDeathStatus ()) {
+			Die ();
+		}else if (GetDistanceToTarget () < distanceWhenRoar + 5 && GetDistanceToTarget () > distanceWhenRoar - 5) {
+			LookAtPlayer ();
 			Roar ();
-			AudioSource.PlayClipAtPoint (roar, transform.position);
+			PlaySound (roar);
 
-		} else if (GetDistanceToTarget () < distanceWhenWalk && GetDistanceToTarget () > distanceWhenAttack) {
+		} else if (IsTargetCloseEnoughToWalk()) {
+			ResetAudioCondition ();
 			WalkToTarget ();
 			WalkAnimation ();
-		} else if (GetDistanceToTarget () < distanceWhenAttack) {
-			
+		} else if (IsTargetCloseEnoughToAttack()) {
+			ResetAudioCondition ();
 			Attack ();
 		} else {
-			
+			ResetAudioCondition ();
 			Idle ();
 		}
-		watchPlayer (); 
+		WatchPlayer (); 
 	}
 
 	override public void Activate () {
 		base.Activate ();
 		animator.enabled = true;
+	}
+	private void Die(){
+		DieAnimation ();
+		PlaySound (dead);
+		Destroy (gameObject,5);
+		bossHead.gameObject.transform = transform;
+		bossHead.SetActive (true);
 	}
 	private void Idle() {
 		animator.SetBool ("Roar", false);
@@ -59,8 +71,9 @@ public class BossBehave : Opponent {
 		animator.SetBool ("Attack", true);
 		animator.SetBool ("Die", false);
 		animator.SetBool ("Walk", false);
+		animator.SetInteger ("AttackNum", Random.Range (1, 3));
 	}
-	private void Die () {
+	private void DieAnimation () {
 		animator.SetBool ("Roar", false);
 		animator.SetBool ("Attack", false);
 		animator.SetBool ("Die", true);

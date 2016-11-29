@@ -11,22 +11,15 @@ public class darkPeapleBehave : MonoBehaviour {
 	public Vector3 target;
 
 	void Start () {
-		 
 		nav = gameObject.GetComponent<NavMeshAgent> ();
 	}
-	void OnCollisionEnter(Collision other ) {
 
-	 
-	}
-	// Update is called once per frame
 	void Update () {
-
 		timer += Time.deltaTime;
 		if (timer >= newTarget) {
 			makeNewTarget ();
 			timer = 0;
 		}
-
 	}
 
 	void makeNewTarget () {

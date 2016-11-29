@@ -6,7 +6,9 @@ public class SceletonOpponent : Opponent {
 
 	Animator animator;
 
-	public float distanceToStay = 2.0f;
+	private void Awake (){
+		InitializeDistanceInformation (2, 20);
+	}
 
 	void Start () {
 		InitializeOpponent ();
@@ -14,25 +16,23 @@ public class SceletonOpponent : Opponent {
 		animator = GetComponent<Animator> ();
 
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		FillTargetInformation ();
 		float actualDistance = GetDistanceToTarget ();
 		lookAtPlayer = false;
-		if (actualDistance <= attackRange && actualDistance > distanceToStay) {
+		if (actualDistance <= distanceWhenWalk && actualDistance > distanceWhenAttack) {
 			lookAtPlayer = true; 
-		
 			WalkToTarget ();
 			Walk ();
-		} else if (actualDistance <= distanceToStay) {
+		} else if (actualDistance <= distanceWhenAttack) {
 			lookAtPlayer = true;
 			Attack ();
 		}
 		else{
 			Idle ();
 		}
-		watchPlayer (); 
+		WatchPlayer (); 
  
 	}
 

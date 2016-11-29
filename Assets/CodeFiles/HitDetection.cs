@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System; 
 public class HitDetection : MonoBehaviour {
 
 
@@ -19,8 +19,13 @@ public class HitDetection : MonoBehaviour {
 	void OnTriggerEnter ( Collider other ){
 		if (other.CompareTag ("Player")) {
 			Debug.Log ("hitted player");
-			//Health health = other.GetComponent<Health> ();
-			//health.Damage (damageVal);
+			try {
+				Health health = other.GetComponent<Health> ();
+				health.Damage (damageVal);
+			}
+			catch(  NullReferenceException  ) {
+				Debug.Log (" exception has been thrown");
+			}
 		}
 	}
 }

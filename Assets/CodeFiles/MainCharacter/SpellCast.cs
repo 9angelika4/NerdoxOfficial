@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System; 
 public class SpellCast : MonoBehaviour {
 
 	public Transform spawn;
@@ -45,9 +45,12 @@ public class SpellCast : MonoBehaviour {
 
 	void hit (GameObject hittedObject ) {
 		Health health = hittedObject.GetComponent < Health> ();
+		if (health == null) {
+			health = hittedObject.GetComponentInParent<Health> ();
+		}
+
 		if (health != null) {
-			health.Damage (damage);
+			health.Damage (20);
 		}
 	}
-
 }
