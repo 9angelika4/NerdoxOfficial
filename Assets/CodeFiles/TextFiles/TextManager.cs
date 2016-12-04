@@ -25,13 +25,9 @@ public class TextManager : MonoBehaviour {
 		turnDownDialog = dialogCanvas.GetComponentInParent<TurnDownTextPanel> ();
 		textLine = textPanel.GetComponentInChildren<Text> ();
 		textLines = textImporter.getText ();
-		if (textLine == null) {
-			Debug.Log ("some probles are found ");
-		}
 		if (endAtLine == 0) {
 			endAtLine = textLines.Count;
 		}
-		Debug.Log (" end line : " + endAtLine +" " + currentLine +" " ) ;
 
 	}
 	

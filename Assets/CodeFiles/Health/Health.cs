@@ -4,7 +4,7 @@ using System.Collections;
 public class Health : MonoBehaviour {
 
 	public float healthValue;
-	protected bool alive;
+	protected bool alive = true;
 
  
 	void Update () {
@@ -19,6 +19,11 @@ public class Health : MonoBehaviour {
 		 
 	}
 
+	public bool IsDead(){
+		if (alive)
+			return false;
+		return true;
+	}
 
 	virtual protected void IsAlive () {
 		if (healthValue < 0) {

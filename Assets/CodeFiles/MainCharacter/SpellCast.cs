@@ -30,11 +30,10 @@ public class SpellCast : MonoBehaviour {
 				Vector3 hitPoint = hitInfo.point ;
 				GameObject hittedObject = hitInfo.collider.gameObject;
 				Debug.Log ("Hit Object : " + hittedObject.name);
-
 				hit(hittedObject);
 				GameObject magic = Instantiate (spell, hitPoint, spawn.rotation) as GameObject;
 				magic.GetComponent<Rigidbody>().AddForce (spawn.forward * spellSpeed);
- 
+ 	
 			}
 
 

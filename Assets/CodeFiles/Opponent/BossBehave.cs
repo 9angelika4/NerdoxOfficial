@@ -57,7 +57,7 @@ public class BossBehave : Opponent {
 		DieAnimation ();
 		PlaySound (dead);
 		Destroy (gameObject,5);
-		bossHead.gameObject.transform = transform;
+		//bossHead.gameObject.transform = transform;
 		bossHead.SetActive (true);
 	}
 	private void Idle() {

@@ -59,6 +59,7 @@
      <Compile Include="Assets\CodeFiles\Instance\UserInterfaceInstace.cs" />
      <Compile Include="Assets\CodeFiles\KillingParticleTrigger.cs" />
      <Compile Include="Assets\CodeFiles\MainCharacter\SpellCast.cs" />
+     <Compile Include="Assets\CodeFiles\ManaController.cs" />
      <Compile Include="Assets\CodeFiles\NextLevelTrigger.cs" />
      <Compile Include="Assets\CodeFiles\Opponent\BossActivation.cs" />
      <Compile Include="Assets\CodeFiles\Opponent\BossBehave.cs" />
@@ -69,6 +70,7 @@
      <Compile Include="Assets\CodeFiles\Opponent\MyMonster\darkPeapleBehave.cs" />
      <Compile Include="Assets\CodeFiles\Opponent\Opponent.cs" />
      <Compile Include="Assets\CodeFiles\Opponent\SceletonOpponent.cs" />
+     <Compile Include="Assets\CodeFiles\PlayerController.cs" />
      <Compile Include="Assets\CodeFiles\PlayerPresenseDetection.cs" />
      <Compile Include="Assets\CodeFiles\Quests\BossHeadQuest.cs" />
      <Compile Include="Assets\CodeFiles\Quests\DarkPeapleQuest.cs" />
@@ -81,8 +83,6 @@
      <Compile Include="Assets\CodeFiles\TextFiles\TextImporter.cs" />
      <Compile Include="Assets\CodeFiles\TextFiles\TextManager.cs" />
      <Compile Include="Assets\CodeFiles\TextFiles\TurnDownTextPanel.cs" />
-     <Compile Include="Assets\CodeFiles\Timer.cs" />
-     <Compile Include="Assets\CodeFiles\TurnDownTimer.cs" />
      <Compile Include="Assets\CodeFiles\UserInrerfaceController.cs" />
      <Compile Include="Assets\Prototype Materials\ShowcaseMovement.cs" />
      <None Include="Assets\CodeFiles\TextFiles\FirstMap\WelcomeStory.txt" />
