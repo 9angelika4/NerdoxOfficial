@@ -7,8 +7,8 @@ public class darkPeapleBehave : MonoBehaviour {
 	public float timer;
 	public int newTarget;
 	public float speed;
-	public NavMeshAgent nav;
-	public Vector3 target;
+	private NavMeshAgent nav;
+	private Vector3 target;
 
 	void Start () {
 		nav = gameObject.GetComponent<NavMeshAgent> ();

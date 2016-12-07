@@ -20,7 +20,7 @@ public class HitDetection : MonoBehaviour {
 		if (other.CompareTag ("Player")) {
 			Debug.Log ("hitted player");
 			try {
-				Health health = other.GetComponent<Health> ();
+				MainCharacterHealth health = other.GetComponent<MainCharacterHealth> ();
 				health.Damage (damageVal);
 			}
 			catch(  NullReferenceException  ) {

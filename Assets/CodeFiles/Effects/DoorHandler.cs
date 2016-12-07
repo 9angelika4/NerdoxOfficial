@@ -11,22 +11,15 @@ public class DoorHandler : MonoBehaviour {
 		locked = true;
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	void OnTriggerEnter ( Collider collider ) {
 		if(collider.CompareTag("Player") && !locked){
-			Debug.Log ("open door ");
 			OpenTheDoor ();
 		}
 	}
 
 	void OnTriggerExit (Collider collider) {
 		if(collider.CompareTag("Player") && !locked){
-			Debug.Log ("close door ");
 			CloseTheDoor ();
 		} 
 	}
@@ -38,7 +31,6 @@ public class DoorHandler : MonoBehaviour {
 
 	private void OpenTheDoor(){
 		animator.SetBool ("IsOpen", true);
-
 	}
 
 	public void  UnlockTheDorr () {

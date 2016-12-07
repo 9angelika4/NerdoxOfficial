@@ -34,17 +34,19 @@ public class PlayerController : MonoBehaviour {
 		characterControler = GetComponent<CharacterController>();
 		actualSpeed = walkSpeed;
 	}
-
+	private void Awake(){
+		gameObject.SetActive (true);
+	}
 	private void Start () {
 		
 		Initialize();
 	}
 		
 	void Update() {        
-		//if (!isDead ()) {
+		 
 			KeyController ();
 			MouseControll ();
-		//}	 
+	 
 	}
  
 	private void KeyController(){
@@ -137,12 +139,14 @@ public class PlayerController : MonoBehaviour {
 		return false;
 	}
 
-	private bool czyBrakStaminy(){
-		if (mana != null) {
-	 
+	public bool IsPlayerRunning(){
+		return isRunning;
+	}
+	public bool IsPlayerWalking(){
+		if (moveFB != 0 || moveLR != 0) {
+			return true;
 		}
 		return false;
 	}
-
 }
 

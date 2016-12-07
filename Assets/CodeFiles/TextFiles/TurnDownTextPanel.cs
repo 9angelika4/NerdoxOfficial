@@ -4,8 +4,11 @@ using System.Collections;
 public class TurnDownTextPanel : MonoBehaviour {
 
 	public Canvas dialogCanvas;
+	public bool showOnAwake = false;
 	private void Start () {
-		dialogCanvas.enabled = false;
+		if (!showOnAwake) {
+			dialogCanvas.enabled = false;
+		}
 	}
 	public void turnDownPanel () {
 		dialogCanvas.enabled = false;

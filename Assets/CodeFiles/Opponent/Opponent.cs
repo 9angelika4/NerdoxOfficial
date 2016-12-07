@@ -57,17 +57,20 @@ public class Opponent : MonoBehaviour {
 		gameObject.SetActive (true);
 	}
 	virtual protected void WatchPlayer(){
-		if (smoothRotation && lookAtPlayer == true) {
-			Quaternion rotation = Quaternion.LookRotation (targetPositionXYZ - opponent.position);
-			opponent.rotation = Quaternion.Slerp (opponent.rotation, rotation, Time.deltaTime * movementSpeed);
+		if (opponent != null) {
+			if (smoothRotation && lookAtPlayer == true) {
+				Quaternion rotation = Quaternion.LookRotation (targetPositionXYZ - opponent.position);
+				opponent.rotation = Quaternion.Slerp (opponent.rotation, rotation, Time.deltaTime * movementSpeed);
 
-		} else if (!smoothRotation && lookAtPlayer == true) {
-			transform.LookAt (targetPositionXYZ);
+			} else if (!smoothRotation && lookAtPlayer == true) {
+				transform.LookAt (targetPositionXYZ);
+			}
 		}
-
 	}
 	protected void WalkToTarget(){
-		opponent.position = Vector3.MoveTowards (opponent.position, targetPositionXYZ, movementSpeed * Time.deltaTime);
+		if (opponent!=null) {
+			opponent.position = Vector3.MoveTowards (opponent.position, targetPositionXYZ, movementSpeed * Time.deltaTime);
+		}
 	}
 
 	protected void  FillingOponentAndTargetInformation () {

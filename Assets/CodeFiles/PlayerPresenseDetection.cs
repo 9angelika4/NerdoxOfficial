@@ -5,7 +5,6 @@ public class PlayerPresenseDetection : MonoBehaviour {
 
 	private bool enteredOnTrigger = false  ;
 
-
 	public bool PlayerDetected () {
 		return enteredOnTrigger; 
 	}

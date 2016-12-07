@@ -24,7 +24,6 @@ public class SpellCast : MonoBehaviour {
 		if( Input.GetButtonDown("Fire1")){
 			Ray ray = new Ray (Camera.main.transform.position, Camera.main.transform.forward);
 			RaycastHit hitInfo;
-			Debug.Log ("fire1 !");
 			if(Physics.Raycast(ray, out hitInfo, range)) {
 				  
 				Vector3 hitPoint = hitInfo.point ;

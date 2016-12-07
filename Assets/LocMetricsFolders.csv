@@ -1,0 +1,25 @@
+Folder,Files,LOC,SLOC-P,SLOC-L,MVG,BLOC,C&SLOC,CLOC,CWORD,HCLOC,HCWORD
+Total,93,6248,4786,3014,442,1220,61,242,2418,0,3
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets,93,6248,4786,3014,442,1220,61,242,2418,0,3
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\CodeFiles,48,1843,1406,1035,117,414,1,23,111,0,3
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\CodeFiles\Effects,1,40,29,20,2,10,0,1,4,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\CodeFiles\Health,5,139,100,70,14,39,0,0,0,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\CodeFiles\Instance,3,66,54,25,1,11,0,1,4,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\CodeFiles\MainCharacter,8,258,193,142,22,63,0,2,10,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\CodeFiles\Opponent,9,551,435,343,31,112,0,4,20,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\CodeFiles\Opponent\Bullet,1,22,17,12,4,5,0,0,0,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\CodeFiles\Opponent\MyMonster,1,38,27,22,1,11,0,0,0,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\CodeFiles\Quests,6,134,96,70,9,34,0,4,18,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\CodeFiles\TextFiles,4,143,104,79,9,36,0,3,14,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\Prototype Materials,1,13,8,5,0,5,0,0,0,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\Standard Assets,44,4392,3372,1974,325,801,60,219,2307,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\Standard Assets\CrossPlatformInput,11,1317,987,524,86,277,33,53,798,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\Standard Assets\CrossPlatformInput\Scripts,11,1317,987,524,86,277,33,53,798,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific,2,213,161,79,23,50,0,2,28,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\Standard Assets\Environment,9,970,773,480,82,157,8,40,371,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\Standard Assets\Environment\Water,8,938,744,463,80,154,8,40,371,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\Standard Assets\Environment\Water (Basic),1,32,29,17,2,3,0,0,0,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\Standard Assets\Environment\Water (Basic)\Scripts,1,32,29,17,2,3,0,0,0,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\Standard Assets\Environment\Water\Water,8,938,744,463,80,154,8,40,371,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\Standard Assets\Environment\Water\Water\Scripts,8,938,744,463,80,154,8,40,371,0,0
+C:\Users\Angelika\Documents\UnityProjects\Nerdox1\Nerdox\Assets\Standard Assets\Utility,24,2105,1612,970,157,367,19,126,1138,0,0

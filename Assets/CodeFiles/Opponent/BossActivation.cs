@@ -7,18 +7,18 @@ public class BossActivation : MonoBehaviour   {
 	private float distanceToActivate  = 80 ;
 	private bool checkDistance ;
 	private bool isActivated;
+
 	void Awake(){
 		bossBehave = GetComponentInChildren<BossBehave> ();
 	}
-	// Use this for initialization
+
 	void Start () {
 
 		bossBehave.GetDistanceInformation ();
 		checkDistance = false;
 		isActivated = false;
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		if ( bossBehave.GetDistanceInformation () < distanceToActivate && checkDistance && !isActivated) {
 			Activation ();

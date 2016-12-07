@@ -3,14 +3,14 @@ using System.Collections;
 
 public class ShowDialogWindow : MonoBehaviour {
 
-	private TurnDownTextPanel turnDownPanel;
+	protected TurnDownTextPanel turnDownPanel;
 	public GameObject panelManagement ;
 	 
-	void Start () {
-
+	protected void Initialize(){
 		turnDownPanel = panelManagement.GetComponent<TurnDownTextPanel> ();
-	 
-	
+	}
+	void Start () {
+		Initialize ();	
 	}
 
 	void OnTriggerEnter (Collider collider) {

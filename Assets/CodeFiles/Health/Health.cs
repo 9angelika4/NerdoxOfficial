@@ -35,7 +35,9 @@ public class Health : MonoBehaviour {
 	}
 
 
-
+	public float GetValue(){
+		return healthValue;
+	}
 
 
 }

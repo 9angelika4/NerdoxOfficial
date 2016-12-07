@@ -9,10 +9,11 @@ public class BossBehave : Opponent {
 	private int distanceWhenRoar   = 60 ;
 	private BossHealth myHealth;
 	public GameObject bossHead;
- 
+	private bool isDeactivated;
 	// Use this for initialization
 	void Awake() {
 		bossHead.SetActive (false);
+		isDeactivated = false;
 		InitializeOpponent();
 		FillTargetInformation ();
 		InitializeDistanceInformation (10, 30);
@@ -26,27 +27,33 @@ public class BossBehave : Opponent {
 	
 	// Update is called once per frame
 	void Update () {
-		InitializeOpponent();
-		FillTargetInformation ();
-		if (myHealth.GetDeathStatus ()) {
-			Die ();
-		}else if (GetDistanceToTarget () < distanceWhenRoar + 5 && GetDistanceToTarget () > distanceWhenRoar - 5) {
-			LookAtPlayer ();
-			Roar ();
-			PlaySound (roar);
 
-		} else if (IsTargetCloseEnoughToWalk()) {
-			ResetAudioCondition ();
-			WalkToTarget ();
-			WalkAnimation ();
-		} else if (IsTargetCloseEnoughToAttack()) {
-			ResetAudioCondition ();
-			Attack ();
+		if (!myHealth.GetDeathStatus ()) {
+			InitializeOpponent ();
+			FillTargetInformation ();
+			if (GetDistanceToTarget () < distanceWhenRoar + 5 && GetDistanceToTarget () > distanceWhenRoar - 5) {
+				LookAtPlayer ();
+				Roar ();
+				PlaySound (roar);
+
+			} else if (IsTargetCloseEnoughToWalk () && !myHealth.GetDeathStatus ()) {
+				ResetAudioCondition ();
+		 
+				WalkToTarget ();
+				WalkAnimation ();
+			} else if (IsTargetCloseEnoughToAttack () && !myHealth.GetDeathStatus ()) {
+				ResetAudioCondition ();
+				Attack ();
+			} else {
+				ResetAudioCondition ();
+				Idle ();
+			}
+	 
+			WatchPlayer (); 
 		} else {
-			ResetAudioCondition ();
-			Idle ();
+			Die ();
 		}
-		WatchPlayer (); 
+		 
 	}
 
 	override public void Activate () {
@@ -56,9 +63,13 @@ public class BossBehave : Opponent {
 	private void Die(){
 		DieAnimation ();
 		PlaySound (dead);
-		Destroy (gameObject,5);
-		//bossHead.gameObject.transform = transform;
 		bossHead.SetActive (true);
+		Invoke ("SetDeactive", 2);
+		 
+
+	}
+	private void SetDeactive(){
+		gameObject.SetActive (false);
 	}
 	private void Idle() {
 		animator.SetBool ("Roar", false);
